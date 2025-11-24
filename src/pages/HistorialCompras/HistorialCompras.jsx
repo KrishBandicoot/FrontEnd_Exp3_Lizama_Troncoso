@@ -211,7 +211,7 @@ export function HistorialCompras() {
                                         <div className="compra-card-header">
                                             <div className="compra-id">
                                                 <i className="bi bi-receipt"></i>
-                                                <span>Compra #{compra.id}</span>
+                                                <span>Compra</span>
                                             </div>
                                             <span className={`badge ${getEstadoBadgeClass(compra.estado)}`}>
                                                 {compra.estado}

@@ -53,6 +53,10 @@ export function Home() {
         navigate('/admin');
     };
 
+    const handleIrAlHistorial = () => {
+        navigate('/historial-compras');
+    };
+
     const handleLogout = () => {
         if (window.confirm('¿Estás seguro de que quieres cerrar sesión?')) {
             logout();
@@ -98,6 +102,17 @@ export function Home() {
                                 Panel Admin
                             </button>
                         )}
+                        
+                        {/* Nuevo botón de Historial de Compras */}
+                        <button 
+                            onClick={handleIrAlHistorial}
+                            className="btn btn-sm btn-info"
+                            style={{ fontSize: '0.85rem' }}
+                            title="Ver mis compras"
+                        >
+                            <i className="bi bi-clock-history me-1"></i>
+                            Mis Compras
+                        </button>
                         
                         <button 
                             onClick={handleLogout}
