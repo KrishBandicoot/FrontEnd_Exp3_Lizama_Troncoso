@@ -18,6 +18,7 @@ import { Categorias } from './pages/Categorias/Categorias';
 import { Envios } from './pages/Envios/Envios';
 import { Boleta } from './componentes/Boleta/Boleta';
 import { Compras } from './pages/Compras/Compras';
+import { HistorialCompras } from './pages/HistorialCompras/HistorialCompras';
 import './App.css'  
 
 function App() {
@@ -52,6 +53,9 @@ function App() {
               <Route path="/envios" element={<Envios />} />
               <Route path="/boleta" element={<Boleta />} />
               <Route path="/compras" element={<Compras />} />
+              
+              {/* Ruta de Historial de Compras (para usuarios) */}
+              <Route path="/historial-compras" element={<HistorialCompras />} />
 
            </Routes>
         </Router>
