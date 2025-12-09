@@ -295,6 +295,20 @@ export function Productos() {
                                             onError={(e) => { e.target.src = 'https://via.placeholder.com/300x200?text=Sin+Imagen'; }} />
                                     </div>
                                     <div className="producto-info">
+                                        
+                                        {/* === AQUÍ AGREGUÉ LA ALERTA DE STOCK CRÍTICO === */}
+                                        {producto.stock < 5 && producto.stock > 0 && (
+                                            <div className="alert alert-danger p-1 text-center fw-bold mb-2" style={{ fontSize: '0.8rem' }}>
+                                                ⚠️ Stock Crítico ({producto.stock})
+                                            </div>
+                                        )}
+                                        {producto.stock === 0 && (
+                                            <div className="alert alert-dark p-1 text-center fw-bold mb-2" style={{ fontSize: '0.8rem' }}>
+                                                Agotado
+                                            </div>
+                                        )}
+                                        {/* ============================================== */}
+
                                         <h3 className="producto-nombre">{producto.nombre}</h3>
                                         <p className="producto-descripcion">
                                             {producto.descripcion?.length > 80 ? producto.descripcion.substring(0, 80) + '...' : producto.descripcion}
